@@ -1,49 +1,113 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
 body {
   font-size: 1.125rem;
   color: #887f7f;
-  background-color: #f7f2ebe1; }
+  background-color: #f7f2ebe1;
+}
 
 .container {
   background-color: #fff;
   max-width: 980px;
   margin: 0 auto;
-  width: 90%; }
-  .container h1 {
-    font-size: 3rem;
-    text-align: center; }
-  .container span {
-    color: #b7823f; }
-  .container img {
-    padding: 0.5rem 0;
-    display: block;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 25px; }
-  .container .columns {
-    display: flex;
-    margin: 1.2rem 0rem;
-    justify-content: space-between; }
-    .container .columns .col {
-      padding: 0rem 0.2rem; }
-      .container .columns .col p {
-        line-height: 1.5rem; }
-    .container .columns h2 {
-      margin-right: 0.5rem;
-      margin-bottom: 0.5rem;
-      font-size: 1.5rem;
-      color: #212614; }
-    .container .columns > *:last-child {
-      background-color: #212614;
-      padding: 1.5rem;
-      text-align: center;
-      align-content: center;
-      max-width: 19.25rem; }
-      .container .columns > *:last-child > p {
-        color: #ffffff; }
+  width: 90%;
+}
 
-/*# sourceMappingURL=main.css.map */
+.container h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.container span {
+  color: #b7823f;
+}
+
+.container img {
+  padding: 0.5rem 0;
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 25px;
+}
+
+.container .columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem 0rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .columns .col {
+  padding: 0rem 0.2rem;
+}
+
+.container .columns .col p {
+  line-height: 1.5rem;
+}
+
+.container .columns h2 {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: #212614;
+}
+
+.container .columns > *:last-child {
+  background-color: #212614;
+  padding: 1.5rem;
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  max-width: 19.25rem;
+}
+
+.container .columns > *:last-child > p {
+  color: #ffffff;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background-color: orange;
+  }
+  .container > *:last-child > div {
+    background-color: orchid;
+    margin-top: 0rem;
+  }
+  .columns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    margin: 0rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 0rem 0.5rem;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .columns .col {
+    border: 1px solid red;
+    margin: 1rem 0;
+    padding: 1rem;
+  }
+  .columns .col p {
+    text-align: justify;
+  }
+  .columns .col:last-child {
+    margin: 1rem 0rem;
+  }
+  .columns .col:last-child {
+    max-width: 100%;
+    padding: 1rem;
+  }
+}
